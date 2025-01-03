@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<center>
+<h1>Archon's Codex</h1>
+
+<h3>Ad astra abyssosque! Welcome to the Adventurers' Guild.</h3>
+
+<p>The Archons' Codex, with Roxanne Garcia, Jeremieh Herrera, and Zaria Lu, students from the University of the Philippines with a major in Bachelor of Library and Information Science, prepared a Genshin database consisting of all the released 5-star Characters as of the 5.3 update or the current game version. Aiming to provide a thorough database of the included characters’ Nation of Origin, Vision, and Weapon Type they yield to act as a guide to help fellow Genshin Impact players in their character choosing and Genshin Impact endeavors. <br/><br/>
+
+
+Through their dedication and passion, Archons' Codex envisions itself as the convergence of adventurers and scholars alike, merging the dynamic lore of Teyvat with the precision of database design. Just as Genshin’s Archons guide their nations, this team of aspiring information scientists created an archive of knowledge designed to guide the paths of players navigating the wide landscapes of Teyvat.<br/><br/>
+
+
+In every byte of data and every line of code, Archons' Codex channels the spirit of wisdom and exploration. By connecting the mystique of Genshin Impact with the discipline of information management, we aspire to create not just a tool but an comprehensive repository for the curious minds of the community.
+<br/><br/>
+
+Join hands with the Archons' Codex—discover, strategize, and ascend!</p>
+
+
+</center>
+
+<form method="POST" action="{% url 'about_us' %}">{% csrf_token %}
+
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<center>
+<h1>Genshin Impact 5 Star Characters</h1>
+
+<p><em>As of The Version 5.3 Update</em></p> 
+
+</center>
+
+<table class="table table-striped table-hover table-bordered border-warning">
+  <thead class="table-warning">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Nation</th>
+      <th scope="col">Vision</th>
+      <th scope="col">Weapon</th>
+      <th scope="col">Created At</th>
+      <th scope="col">ID</th>
+    </tr>
+  </thead>
+  <tbody>
+
+{% if records %}
+      {% for record in records %}
+        <tr>
+          <td>{{ record.name }}</td>
+          <td>{{ record.nation }}</td>
+          <td>{{ record.vision }}</td>
+          <td>{{ record.weapon }}</td>
+          <td>{{ record.created_at }}</td>
+          <td><a href="{% url 'record' record.id %}">{{ record.id }}</a></td>
+    </tr>
+          {% endfor %}
+      {% endif %}
+  </tbody>
+</table>
+
+
+    <br/>
+
+
+{% else %}
+
+<div class="col-md-6 offset-md-3"> 
+
+<h1>Login.</h1>
+<br/>
+
+<form method="POST" action="{% url 'home' %}">
+	{% csrf_token %}
+
+  <div class="mb-3">
+    <input type="text" class="form-control" name="username", placeholder="Username" required>
+  </div>
+
+</br>
+  <div class="mb-3">
+    <input type="password" class="form-control"  name="password", placeholder="Password" required>
+  </div>
+  <br/>
+  <button type="submit" class="btn btn-secondary">Submit</button>
+</form>
+
+</div>
+
+{% endif %}
+
+{% endblock %}
