@@ -2,3 +2,7 @@ GROUP MEMBERS:
 1. GARCIA, Roxanne
 2. HERRERA, Jeremieh
 3. LU, Zaria
+
+ADMIN
+1. USERNAME: admin1
+2. PASSWORD: lis160
