@@ -1,4 +1,4 @@
 GROUP MEMBERS:
-GARCIA, Roxanne
-HERRERA, Jeremieh
-LLU, Zaria
+1. GARCIA, Roxanne
+2. HERRERA, Jeremieh
+3. LU, Zaria
